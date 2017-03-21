@@ -1,6 +1,11 @@
 package com.devopsbuddy.utils;
 
+import javax.servlet.http.HttpServletRequest;
+
+import org.springframework.mock.web.MockHttpServletRequest;
+
 import com.devopsbuddy.backend.persistence.domain.backend.User;
+import com.devopsbuddy.web.controllers.ForgotMyPasswordController;
 
 /**
  * Created by tedonema on 30/03/2016.
@@ -34,4 +39,21 @@ public class UserUtils {
 
         return user;
     }
+
+	public static String createPasswordResetUrl(HttpServletRequest request, long userId,
+			String token) {
+		String passwordResetUrl = 
+				request.getScheme() +
+					    "://" +
+						request.getServerName()+
+						request.getServerPort()+
+						request.getContextPath()+
+						ForgotMyPasswordController.CHANGE_PASSWORD_PATH +
+						"?id=" +
+						userId +
+						"&token=" +
+						token;
+						
+		return passwordResetUrl;
+	}
 }
