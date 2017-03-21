@@ -46,6 +46,7 @@ public class UserUtils {
 				request.getScheme() +
 					    "://" +
 						request.getServerName()+
+						":" +
 						request.getServerPort()+
 						request.getContextPath()+
 						ForgotMyPasswordController.CHANGE_PASSWORD_PATH +
