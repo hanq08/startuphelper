@@ -6,6 +6,7 @@ import org.springframework.mock.web.MockHttpServletRequest;
 
 import com.devopsbuddy.backend.persistence.domain.backend.User;
 import com.devopsbuddy.web.controllers.ForgotMyPasswordController;
+import com.devopsbuddy.web.domain.frontend.BasicAccountPayload;
 
 /**
  * Created by tedonema on 30/03/2016.
@@ -56,5 +57,22 @@ public class UserUtils {
 						token;
 						
 		return passwordResetUrl;
+	}
+
+	public static <T extends BasicAccountPayload> User fromWebUserToDomainUser(T frontendPayload) {
+		User user = new User();
+        user.setUsername(frontendPayload.getUsername());
+        user.setPassword(frontendPayload.getPassword());
+        user.setFirstName(frontendPayload.getFirstName());
+        user.setLastName(frontendPayload.getLastName());
+        user.setEmail(frontendPayload.getEmail());
+        user.setPhoneNumber(frontendPayload.getPhoneNumber());
+        user.setCountry(frontendPayload.getCountry());
+        user.setEnabled(true);
+        user.setDescription(frontendPayload.getDescription());
+
+        return user;
+		
+		
 	}
 }
