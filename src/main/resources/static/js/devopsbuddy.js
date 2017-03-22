@@ -10,6 +10,13 @@ function main() {
     });
 
     /* Contact form validation */
+    var constraints = {
+    		email:{
+    			presence:true,
+    			email:true
+    		}
+    }
+    
     $('#contactForm').formValidation({
         framework: 'bootstrap',
         icon: {
