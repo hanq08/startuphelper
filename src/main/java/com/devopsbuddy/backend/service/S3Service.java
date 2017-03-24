@@ -6,6 +6,8 @@ import com.amazonaws.services.s3.model.AccessControlList;
 import com.amazonaws.services.s3.model.GroupGrantee;
 import com.amazonaws.services.s3.model.Permission;
 import com.amazonaws.services.s3.model.PutObjectRequest;
+import com.devopsbuddy.exceptions.S3Exception;
+
 import org.apache.commons.io.FilenameUtils;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -155,6 +157,7 @@ public class S3Service {
             } catch (AmazonClientException ace) {
                 LOG.error("A client exception occurred while trying to store the profile" +
                         " image {} on S3. The profile image won't be stored", resource.getAbsolutePath(), ace);
+                throw new S3Exception(ace);
         
             }
         }
