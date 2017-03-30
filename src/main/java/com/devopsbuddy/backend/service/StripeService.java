@@ -1,7 +1,5 @@
 package com.devopsbuddy.backend.service;
 
-import static org.assertj.core.api.Assertions.assertThatThrownBy;
-
 import java.util.Map;
 
 import org.slf4j.Logger;
@@ -9,7 +7,6 @@ import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import com.devopsbuddy.exceptions.*;
 import com.stripe.Stripe;
 import com.stripe.exception.APIConnectionException;
 import com.stripe.exception.APIException;

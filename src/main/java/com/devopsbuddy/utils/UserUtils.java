@@ -2,7 +2,7 @@ package com.devopsbuddy.utils;
 
 import javax.servlet.http.HttpServletRequest;
 
-import org.springframework.mock.web.MockHttpServletRequest;
+
 
 import com.devopsbuddy.backend.persistence.domain.backend.User;
 import com.devopsbuddy.web.controllers.ForgotMyPasswordController;

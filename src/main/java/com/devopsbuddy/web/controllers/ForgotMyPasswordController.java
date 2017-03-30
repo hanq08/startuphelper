@@ -35,7 +35,7 @@ public class ForgotMyPasswordController {
 	
 	private static final Logger LOG = LoggerFactory.getLogger(ForgotMyPasswordController.class);
 	
-	public static final String EMAIL_ADDRESS_VIEW_NAME = "forgotmypassword/emailform";
+	public static final String EMAIL_ADDRESS_VIEW_NAME = "forgotmypassword/emailForm";
 	
 	public static final String CHANGE_PASSWORD_VIEW_NAME = "forgotmypassword/changePassword";
 	
