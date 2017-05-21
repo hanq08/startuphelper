@@ -7,7 +7,7 @@ This project is built based on Marco Tedone's project devopsbuddy. I've used clo
 The easiest way to install LambCI is to spin up a CloudFormation stack using startuphelper.template – this is just a collection of related AWS resources, including the private spring boot server, public web server, bastion host and RDS, that you can update or remove together – it should take around 3-4 minutes to spin up.
 
 ### 1. Launch the StartupHelper CLoudFormation stack
-You can either use this direct link or navigate in your AWS Console to Services > CloudFormation, choose "Create Stack" and upload startuphelper.template from the root of this repository. 
+You can navigate in your AWS Console to Services > CloudFormation, choose "Create Stack" and upload startuphelper.template from the root of this repository. 
 
 Then click Next where you can enter a stack name. Click Next, and then Next again on the Options step (leaving the default options selected), to get to the final Review step. Check the acknowledgment checkbox and click Create to start the resource creation process.
 
