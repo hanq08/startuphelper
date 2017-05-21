@@ -12,7 +12,7 @@ You can either use this direct link or navigate in your AWS Console to Services 
 Then click Next where you can enter a stack name. Click Next, and then Next again on the Options step (leaving the default options selected), to get to the final Review step. Check the acknowledgment checkbox and click Create to start the resource creation process.
 
 ### 2. Configuration
-All configurations for startuphelper are stored in S3 bucket startuphelper-theodore-config and user may change the files in s3 and download it to the private spring boot server or user can ssh into the private spring boot server through the bastion host and modify the config files in ~/.devopsbuddy   
+All configurations for startuphelper are in the private spring boot server ~/.devopsbuddy and user may change the files in by ssh into the private spring boot server through the bastion host and modify the config files in ~/.devopsbuddy   
 #### 1. Create a Amazon Stripe Token
 Stripe is a suite of APIs that powers commerce for businesses of all sizes. This project uses stripe to charge monthly fee. Create stripe account by clicking this [link](https://stripe.com/). Then log into your account and create a subscription plan and name it. Open stripe.properties file and then ssh into your private spring boot server and replace key values in ~/.devopsbuddy/stripe.properties with your stripe private key and publishable key. Notice that stripe provides test account and production account. Use test account credentials if you want to test it.  
 #### 2. Setup your email
