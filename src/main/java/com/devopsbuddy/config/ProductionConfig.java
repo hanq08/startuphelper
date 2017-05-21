@@ -7,7 +7,7 @@ import org.springframework.context.annotation.Profile;
 import org.springframework.context.annotation.PropertySource;
 
 import com.devopsbuddy.backend.service.EmailService;
-import com.devopsbuddy.backend.service.MockEmailService;
+import com.devopsbuddy.backend.service.SESEmailService;
 import com.devopsbuddy.backend.service.SmtpEmailService;
 
 @Configuration
