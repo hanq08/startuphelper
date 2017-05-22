@@ -18,4 +18,4 @@ Stripe is a suite of APIs that powers commerce for businesses of all sizes. This
 #### 2. Setup your email
 You need to setup your email to receive feedback from customers. Replace dummy email in ~/.devopsbuddy/application-prod.properties with your email account details.
 ## Architecture Overview
-![Architecture diagram](https://tqhan.xyz/images/detail/startup_helper_aws_architecture.PNG)
+![Architecture diagram](https://github.com/hanq08/startuphelper/blob/master/misc/startup_helper_aws_architecture.PNG)
